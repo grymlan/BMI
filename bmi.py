@@ -9,12 +9,16 @@ df_female = pd.read_csv('BMI-chart-female.csv')
 @app.get('/percentile')
 async def get_percentile(gender: str, age: float, bmi: float):
     ''' 
-    api endpoint for finding BMI percentile
+    API endpoint for finding BMI percentile based on BMI charts from the CDC.
 
     Parameters
     ----------
     gender : str
-        Specify 'male' or 'female'
+        Specify ['male','Male','M','m'] or ['female','Female','F','f']
+    age : int
+        Specify age in months (24months-240months)
+    bmi : float
+        Specify BMI number (5 decimal places)
     
     '''
     try:
