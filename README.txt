@@ -1,0 +1,1 @@
+Docker does not compile in the root folder. I think it might be due to the .git/ folder.
