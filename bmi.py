@@ -7,7 +7,7 @@ df_male = pd.read_csv('BMI-chart-male.csv')
 df_female = pd.read_csv('BMI-chart-female.csv')
 
 # containerized run command
-# todo: implement docker compose file
+# 🗒️todo: implement docker compose file
 # docker run -p 0.0.0.0:8000:8000 bmi_image
 
 @app.get('/percentile')
@@ -40,4 +40,5 @@ async def get_percentile(gender: str, age: float, bmi: float):
             return {'percentile': f'{percentile} percentile' }
     except Exception as e:
         pass
+
     
